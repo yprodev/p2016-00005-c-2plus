@@ -18,6 +18,7 @@ int main()
         cout << number1 << endl << number2 << endl
     */
 
+    /*
     int number1, number2, result;
     cout << "Enter the first integer: ";
     cin >> number1;
@@ -25,6 +26,28 @@ int main()
     cin >> number2;
     result = number1 + number2;
     cout << "Here is the sum " << result << endl;
+
+    */
+
+    /*
+    string name;
+    cin >> name;
+    cout << name << endl;
+    */
+
+    /*
+    string firstName, lastName;
+    cin >> firstName >> lastName;
+    cout << firstName << " " << lastName << endl;
+    */
+
+    string fullName;
+    cout << "Enter your full name: ";
+    getline(cin, fullName);
+    cout << "You name is " << fullName << endl;
+
+
+
 
 
 
