@@ -30,5 +30,28 @@ int main()
     middleName = "Anne";
     lastName = "Brown";
 
+
+    /* Exercise */
+    string firstPersonsName;
+    firstPersonsName = "Mike";
+    cout << endl;
+    cout << "Hello, " << firstPersonsName << endl;
+    string middlePersonsName, lastPersonsName;
+    middlePersonsName = "Mason";
+    lastPersonsName = "McMillan";
+
+    cout << "Hello, " << firstPersonsName << " "
+         << middlePersonsName << " "
+         << lastPersonsName << endl;
+
+    int personsAge = 53;
+    string fullPersonsName = firstPersonsName + " " + middlePersonsName + " " + lastPersonsName;
+
+    cout << endl;
+    cout << "Hello, " << fullPersonsName << endl;
+    cout << "You are " << personsAge << " years old." << endl;
+
+    cout << "Next year you will be " << personsAge + 1 << " years old." << endl;
+
     return 0;
 }
