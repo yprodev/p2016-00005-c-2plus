@@ -41,10 +41,47 @@ int main()
     cout << firstName << " " << lastName << endl;
     */
 
+    /*
     string fullName;
     cout << "Enter your full name: ";
     getline(cin, fullName);
     cout << "You name is " << fullName << endl;
+    */
+
+    /* Exercise */
+    string name, present, city, yourName;
+    int age;
+
+    cout << "Enter a name: ";
+    getline(cin, name);
+
+    cout << "Enter the present they bought: ";
+    getline(cin, present);
+
+    cout << "Enter the city they are from: ";
+    getline(cin, city);
+
+    cout << "Enter your name: ";
+    getline(cin, yourName);
+
+    cout << "Enter your age: ";
+    cin >> age;
+
+    cout << endl << endl;
+    cout << "Dear " << name << "," << endl << endl;
+    cout << "Thank you for the " << present << ". "
+         << "I really like it. I can't believe I'm "
+         << "already " << age << " years old, but it "
+         << "doesn't feel that much different then "
+         << "being " << age - 1 << ". I hope that some "
+         << "time this year we can come visit you in "
+         << city << "." << endl << endl;
+    cout << "Again, thank you for the " << present << "." << endl << endl;
+    cout << "Sincerely yours," << endl;
+    cout << yourName << endl;
+
+
+
 
 
 
