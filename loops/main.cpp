@@ -82,7 +82,7 @@ int main()
 
     /*
         Sentinel controll loop is looking for a special value
-    */
+
 
     int grade, gradeTotal, numGrades;
     double average;
@@ -98,6 +98,29 @@ int main()
     average = gradeTotal / numGrades;
     cout << "The average grade is: " << average << endl;
 
+    */
+
+    /*
+        Results controlled loop
+    */
+
+    double balance, rate;
+    int years, target;
+    years = 0;
+    cout << "What is your begining balance: ";
+    cin >> balance;
+    cout << "What is your annual interest rate: ";
+    cin >> rate;
+    cout << "What is the target balance: ";
+    cin >> target;
+    while (balance < target) {
+        balance *= rate;
+        ++years;
+    }
+
+    cout << "It will take " << years
+         << " to reach the target balance of "
+         << target << "." << endl;
 
 
     return 0;
