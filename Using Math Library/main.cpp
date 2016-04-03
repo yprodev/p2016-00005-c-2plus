@@ -19,6 +19,41 @@ int main()
     // Modulus for doubles
     cout << fmod(28.4566, 3) << endl;
 
+    /*
+        Mixing data types
+    */
+
+    cout << endl << 3 / 2 << endl; // We will get 1
+
+    /*
+        Operation between two integers will give us the integer result.
+        To correct that situation we need to change one of integers to
+        float number.
+    */
+
+    cout << 3 / 2.0 << endl; // We will get 1
+
+
+    int number;
+    double rate;
+    number = 2;
+    rate = 1.0345;
+    // Reassigning number variable with a different data type
+    number = rate;
+    cout << endl << number << endl; // We will see 1 - narrowing conversion
+
+    rate = 2;
+    cout << rate << endl; // widening conversion - double data type withoug float point and numbers after that
+    // Implicit conversion
+    // Explicit conversion - type cast
+
+    // Example of type cast
+    // In this way we are converting rate to an integer data type
+    number = (int)rate;
+    rate = (double)number;
+    cout << number << " " << rate << endl;
+
+
 
 
     return 0;
