@@ -102,7 +102,7 @@ int main()
 
     /*
         Results controlled loop
-    */
+
 
     double balance, rate;
     int years, target;
@@ -121,6 +121,52 @@ int main()
     cout << "It will take " << years
          << " to reach the target balance of "
          << target << "." << endl;
+    */
+
+    /*
+        for loop - always count controlled
+
+    for (int i = 0; i < 11; i++) {
+        cout << i << " ";
+    }
+
+    */
+
+    /*
+
+    double balance, rate;
+    int years;
+    cout << "What is your begining balance: ";
+    cin >> balance;
+    cout << "What is your annual interest rate: ";
+    cin >> rate;
+    cout << "How many years to calculate: ";
+    cin >> years;
+    for (int i = 1; i <= years; ++i) {
+        balance *= rate;
+    }
+    cout << "You will get: " << balance << endl;
+
+    */
+
+    int num1, num2, product;
+    product = 0;
+
+    cout << "What is the first number? ";
+    cin >> num1;
+    cout << "What is the second number? ";
+    cin >> num2;
+
+    for (int i = 1; i <= num1; ++i) {
+        product += num2;
+    }
+
+    cout << "result: " << product << endl;
+
+
+
+
+
 
 
     return 0;
