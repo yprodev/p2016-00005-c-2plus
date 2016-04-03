@@ -63,6 +63,7 @@ int main()
 
     */
 
+    /*
     int num1, num2, product, count;
     product = 0;
     count = 1;
@@ -76,7 +77,26 @@ int main()
     }
     cout << num1 << " times " << num2 << " = " << product << endl;
 
+    */
 
+
+    /*
+        Sentinel controll loop is looking for a special value
+    */
+
+    int grade, gradeTotal, numGrades;
+    double average;
+    numGrades = gradeTotal = 0;
+    cout << "Enter a grade: ";
+    cin >> grade;
+    while (grade != -1) {
+        gradeTotal += grade;
+        ++numGrades;
+        cout << "Enter a grade: ";
+        cin >> grade;
+    }
+    average = gradeTotal / numGrades;
+    cout << "The average grade is: " << average << endl;
 
 
 
