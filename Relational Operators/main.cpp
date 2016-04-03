@@ -98,6 +98,10 @@ int main()
 
     */
 
+    /*
+        If else-if statements
+
+
     int grade;
     string letterGrade;
     cout << "Enter a grade: ";
@@ -116,6 +120,33 @@ int main()
     cout << "The letter grade for a "
          << grade << " is a "
          << letterGrade << endl;
+    */
+
+
+    int grade;
+    string letterGrade;
+    cout << "Enter a grade: ";
+    cin >> grade;
+    if ((grade >= 97) && (grade <= 100)) {
+        letterGrade = "A+";
+    } else if ((grade >= 93) && (grade <=96)) {
+        letterGrade = "A";
+    } else if ((grade >= 90) && (grade <= 92)) {
+        letterGrade = "A-";
+    } else if (grade >= 80) {
+        letterGrade = "B";
+    } else if (grade >= 70) {
+        letterGrade = "C";
+    } else if (grade >= 60) {
+        letterGrade = "D";
+    } else {
+        letterGrade = "F";
+    }
+    cout << "The letter grade for a "
+         << grade << " is a "
+         << letterGrade << endl;
+
+
 
     return 0;
 }
