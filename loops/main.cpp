@@ -169,7 +169,6 @@ int main()
 
     /*
         Nested for loops
-    */
 
     for (int row = 1; row <= 5; ++row) {
         for (int col = 1; col <=5; ++col) {
@@ -184,6 +183,29 @@ int main()
         }
         cout << endl;
     }
+
+    */
+
+    /*
+        While loop exercise
+    */
+
+    string answer = "Watson";
+    string response;
+    int tries = 1;
+    cout << "Guess the word: ";
+
+    while (tries <= 3) {
+        cout << "Guess: ";
+        getline(cin, response);
+        if (response == answer) {
+            cout << "You are right!" << endl;
+            break;
+        }
+        ++tries;
+
+    }
+
 
 
 
