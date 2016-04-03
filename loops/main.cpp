@@ -149,6 +149,8 @@ int main()
 
     */
 
+    /*
+
     int num1, num2, product;
     product = 0;
 
@@ -163,8 +165,25 @@ int main()
 
     cout << "result: " << product << endl;
 
+    */
 
+    /*
+        Nested for loops
+    */
 
+    for (int row = 1; row <= 5; ++row) {
+        for (int col = 1; col <=5; ++col) {
+            cout << '*';
+        }
+        cout << endl;
+    }
+
+    for (int row1 = 1; row1 <= 5; ++row1) {
+        for (int col1 = 1; col1 <= row1; ++col1) {
+            cout << '*';
+        }
+        cout << endl;
+    }
 
 
 
