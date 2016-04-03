@@ -6,7 +6,6 @@ int main()
 {
     /*
         Relational Operators
-    */
 
     string myPassword = "letmein";
     cout << (myPassword == "password") << endl; // 0 - False
@@ -20,5 +19,21 @@ int main()
     cout << endl << (hourlyRate < 25) << endl; // 0 - False
     cout << (hourlyRate < 25.00) << endl; // 0 - False
     cout << (hourlyRate <= 25.00) << endl; // 1 - True
+
+    */
+
+
+    /*
+        Logical Operators
+    */
+
+    int hoursWorked = 40;
+    double hourlyRate = 9.75;
+    cout << ((hoursWorked < 1) || (hoursWorked > 56)) << endl; // 0 - False
+    cout << ((hoursWorked <= 40) && (hourlyRate <= 10.00)) << endl; // 1 - True
+    cout << !(hoursWorked == 40) << endl; // 0 - False
+
+
+
     return 0;
 }
