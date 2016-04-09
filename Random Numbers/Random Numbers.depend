@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1460216404 source:/home/user/git_projects/p2016-00005-c-2plus/Random Numbers/main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+
