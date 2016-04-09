@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1460226481 source:/home/user/git_projects/p2016-00005-c-2plus/Vector Excercise/main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+
