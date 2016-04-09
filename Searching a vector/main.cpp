@@ -13,12 +13,20 @@ void buildVector(vector<int> &vect) {
 }
 
 int searchVector(vector<int> vect, int value) {
+    /*
+
     for (int i = 0; i < vect.size(); ++i) {
         if (vect[i] == value) {
             return i;
         }
     }
     return -1;
+
+    */
+
+    int found = -1;
+    found = vect.at(value);
+    return found;
 }
 
 int main()
@@ -30,7 +38,8 @@ int main()
 
     cout << "Enter a numeric value you want to find: ";
     cin >> numToSearch;
-    found = searchVector(numbers, numToSearch);
+    //found = searchVector(numbers, numToSearch);
+    found = numbers.at(numToSearch);
     if (found != -1) {
         cout << "The position is: " << found;
     } else {
