@@ -74,7 +74,6 @@ int main()
         Sorting vectors
 
         You will need to include library called <algorithm>
-    */
 
     vector<int> numbers;
     buildVector(numbers, 10);
@@ -82,6 +81,21 @@ int main()
     cout << endl << "==============================================" << endl;
     sort(numbers.begin(), numbers.end());
     displayVector(numbers);
+    cout << endl << "==============================================" << endl;
+
+    */
+
+    vector<string> names;
+    names.push_back("Raymond");
+    names.push_back("David");
+    names.push_back("Cynthia");
+    names.push_back("William");
+    names.push_back("Mikky");
+
+    displayVectorS(names);
+    cout << endl << "==============================================" << endl;
+    sort(names.begin(), names.end());
+    displayVectorS(names);
     cout << endl << "==============================================" << endl;
 
 
