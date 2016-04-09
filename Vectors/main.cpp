@@ -81,7 +81,7 @@ int main()
 
     /*
         Adding data into a vector
-    */
+
 
     vector<string> names;
 
@@ -97,8 +97,44 @@ int main()
     // Assigning default value
     vector<int> numbers(1000,0);
 
+    */
 
 
+    /*
+
+    vector<int> grades;
+    int total, grade;
+    for (int i = 1; i <= 5; ++i) {
+        cout << "Enter a grade: ";
+        cin >> grade;
+        grades.push_back(grade);
+    }
+
+    total = 0;
+
+    for (int i = 0; i < grades.size(); ++i) {
+        total += grades[i];
+    }
+
+    cout << total << endl;
+
+    */
+
+    vector<string> names;
+    names.push_back("David");
+    names.push_back("Raymond");
+    names.push_back("Cynthia");
+    names.push_back("Jennifer");
+    cout << endl;
+    for (int i = 0; i < names.size(); ++i) {
+        cout << names[i] << endl;
+    }
+    names.pop_back();
+    cout << "===========================================================" << endl;
+
+    for (int i = 0; i < names.size(); ++i) {
+        cout << names[i] << endl;
+    }
 
 
     return 0;
