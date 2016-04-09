@@ -6,6 +6,8 @@ using namespace std;
 
 int main()
 {
+    /*
+
     vector<int> grades;
     int grade, total;
     double average;
@@ -32,6 +34,46 @@ int main()
 
     cout << "The average is " << average << " ";
 
+    */
+
+
+
+    /*
+        Three ways of initializing a vector
+
+        Before this include vector library in your program
+        #include <vector>
+
+    */
+
+    /*
+        Creating a vector of names
+        There is no any data now. It's empty.
+
+    vector<string> names;
+
+    // This will provide an error
+    // cout << "The first value is " << names[0] << endl;
+
+
+
+        This also is empty. But we've reserved 10 spaces in memory for
+        10 names inside this vector. Now we will not see any error even
+        when it is empty.
+
+    vector<string> names(10);
+    cout << "The first value is " << names[0] << endl;
+
+        The third way is to set the default value.
+
+    */
+
+    vector<string> names(10,"");
+    cout << "The first value is " << names[0] << endl;
+
+    for (int i = 0; i < names.size(); ++i) {
+        cout << i << " : " << names[i] << endl;
+    }
 
 
 
