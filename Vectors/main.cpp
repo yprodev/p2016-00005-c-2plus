@@ -66,7 +66,7 @@ int main()
 
         The third way is to set the default value.
 
-    */
+
 
     vector<string> names(10,"");
     cout << "The first value is " << names[0] << endl;
@@ -74,6 +74,29 @@ int main()
     for (int i = 0; i < names.size(); ++i) {
         cout << i << " : " << names[i] << endl;
     }
+
+    */
+
+
+
+    /*
+        Adding data into a vector
+    */
+
+    vector<string> names;
+
+    names.push_back("David");
+    names.push_back("Raymond");
+    names.push_back("Cynthia");
+
+    // Using subscript position
+    names[0] = "David";
+    names[1] = "Raymond";
+    names[2] = "Cynthia";
+
+    // Assigning default value
+    vector<int> numbers(1000,0);
+
 
 
 
