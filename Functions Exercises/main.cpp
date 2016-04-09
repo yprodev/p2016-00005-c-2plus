@@ -17,13 +17,35 @@ int qualityPoints(char letterGrade) {
     return qPoints;
 }
 
+string getInitials(string first, string middle, string last) {
+    string firstInit, middleInit, lastInit;
+    firstInit = first.substr(0,1);
+    middleInit = middle.substr(0,1);
+    lastInit = last.substr(0,1);
+
+    return firstInit + middleInit + lastInit;
+}
+
 int main()
 {
+    /*
+
     char grade;
     cout << "Enter a letter grade: ";
     cin >> grade;
     cout << "A " << grade << " earns "
          << qualityPoints(grade) << " quality points. " << endl;
+    */
+    string firstName, middleName, lastName;
+    cout << "Enter your first name: ";
+    getline(cin, firstName);
+    cout << "Enter your middle name: ";
+    getline(cin, middleName);
+    cout << "Enter your last name: ";
+    getline(cin, lastName);
+
+    cout << "Your initials are "
+         << getInitials(firstName, middleName, lastName) << ". " << endl;
 
     return 0;
 }
