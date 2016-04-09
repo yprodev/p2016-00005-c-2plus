@@ -26,6 +26,25 @@ string getInitials(string first, string middle, string last) {
     return firstInit + middleInit + lastInit;
 }
 
+double calc(double operand1, double operand2, char oper) {
+    double result;
+    if (oper == '*') {
+        return operand1 * operand2;
+    }
+    else if (oper == '/') {
+        return operand1 / operand2;
+    }
+    else if (oper == '+') {
+        return operand1 + operand2;
+    }
+    else if (oper == '-') {
+        return operand1 - operand2;
+    }
+    else {
+        cout << "We don't know this kind of operator." << endl;
+    }
+}
+
 int main()
 {
     /*
@@ -35,7 +54,10 @@ int main()
     cin >> grade;
     cout << "A " << grade << " earns "
          << qualityPoints(grade) << " quality points. " << endl;
-    */
+
+
+
+    // ==================================================================
     string firstName, middleName, lastName;
     cout << "Enter your first name: ";
     getline(cin, firstName);
@@ -46,6 +68,20 @@ int main()
 
     cout << "Your initials are "
          << getInitials(firstName, middleName, lastName) << ". " << endl;
+
+    */
+
+    double opt1, opt2;
+    char op;
+
+    cout << "Enter expression: ";
+    cin >> opt1 >> op >> opt2;
+
+    while(true) {
+        cout << "Result: " << calc(opt1, opt2, op) << endl;
+        cout << "Enter expression: ";
+        cin >> opt1 >> op >> opt2;
+    }
 
     return 0;
 }
