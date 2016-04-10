@@ -23,15 +23,25 @@ void displayArray(int arr[], int size) {
     }
 }
 
+void histogram(int arr[], int size) {
+    for (int i = 0; i < size; ++i) {
+        cout << i << ": ";
+        for (int j = 1; j <= arr[i]; ++j) {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+
 int main()
 {
 
     const int size = 101;
     int numbers[size];
     buildArray(numbers, size);
-    cout << endl;
-    displayArray(numbers, size);
-    cout << endl;
+    //cout << endl;
+    //displayArray(numbers, size);
+    //cout << endl;
 
     int distrib[size];
 
@@ -41,9 +51,12 @@ int main()
         distrib[numbers[i]] += 1;
     }
 
-    displayArray(distrib, size);
+    //displayArray(distrib, size);
     cout << endl;
 
+    histogram(distrib, size);
+
+    cout << endl;
 
     return 0;
 }
