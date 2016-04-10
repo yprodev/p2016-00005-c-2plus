@@ -46,6 +46,8 @@ int main()
                               {97, 35, 86, 74, 82},
                               {79, 96, 85, 88, 93}
                              };
+
+
     for (int r = 0; r < rows; ++r) {
         cout << "Student: " << r + 1 << " ";
         for (int c = 0; c < cols; ++c) {
@@ -53,6 +55,27 @@ int main()
             total += grades[r][c];
         }
         average = total / cols;
+        cout << " Average: " << average << endl;
+        // Reseting total and average for each student
+        total = 0;
+        average = 0;
+    }
+    cout << endl;
+
+    /*
+
+        Controlling inner loop by outer and
+        outer loop by inner.
+
+    */
+
+    for (int c = 0; c < cols; ++c) {
+        cout << "Test: " << c + 1 << " ";
+        for (int r = 0; r < rows; ++r) {
+            cout << grades[r][c] << " ";
+            total += grades[r][c];
+        }
+        average = total / rows;
         cout << " Average: " << average << endl;
         // Reseting total and average for each student
         total = 0;
