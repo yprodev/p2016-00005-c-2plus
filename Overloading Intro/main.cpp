@@ -100,8 +100,32 @@ bool operator==(const Date &d1, const Date &d2) {
     return ((d1.getMonth() == d2.getMonth()) && (d1.getDay() == d2.getDay()) && (d1.getYear() == d2.getYear()));
 }
 
+/*
+    We are going to get data from the input stream and we are gonna store in d
+    and return that as the value of the function.
+*/
+
+// non-member function (non-class function)
+istream &operator>>(istream &input, Date &d) {
+    int month, day, year;
+    char slash1, slash2;
+    input >> month >> slash1 >> day >> slash2 >> year;
+    // We are calling a Date constructor and storing that data in d
+    d = Date(month, day, year);
+    return input;
+
+}
+
+// non-member function (non-class function)
+ostream &operator<<(ostream &output, const Date &d) {
+    return output << d.getMonth() << "/" << d.getDay() << "/" << d.getYear();
+}
+
 int main()
 {
+    /*
+        Testing operator overloading
+
     Date today(7,12,2014);
     Date tomorrow = today;
     tomorrow.addDay(1);
@@ -110,5 +134,14 @@ int main()
     } else {
         cout << "A different day!" << endl;
     }
+
+    */
+
+    Date today;
+    cout << "Enter the date (mm/dd/yyyy): " << endl;
+    cin >> today;
+    cout << "Today is: ";
+    cout << today << endl;
+
     return 0;
 }
