@@ -57,15 +57,15 @@ class Date {
 
     */
 
-    int getDay() {
+    int getDay() const {
         return day;
     }
 
-    int getMonth() {
+    int getMonth() const {
         return month;
     }
 
-    int getYear(){
+    int getYear() const {
         return year;
     }
 
@@ -77,6 +77,21 @@ class Date {
         cout << getMonth() << "/" << getDay() << "/" << getYear();
     }
 
+    void addDay(int n) {
+        day += n;
+    }
+
+    void addMonth(int n) {
+        month += n;
+    }
+
+    bool equals(Date dt){
+        if ((month == dt.month) && (day == dt.day) && (year == dt.year)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 };
 
 
@@ -89,5 +104,42 @@ int main()
 
     cout << today.getMonth() << "/" << today.getDay() << "/" << today.getYear()<< endl;
     today.displayDate();
+
+    cout << endl << " ------------------------- " << endl;
+    today.addDay(5);
+    today.displayDate();
+    cout << endl << " ------------------------- " << endl;
+
+
+    /*
+        We can create new Date object from a current Date object.
+    */
+
+    Date tomorrow = today;
+    tomorrow.displayDate();
+
+    cout << endl << " ------------------------- " << endl;
+
+    /*
+        We can't use if statement like this:
+
+            if(today == tomorrow)
+
+        because '==' operator is not defined to work with our user-defined
+        Date class. So, we need to overload the operator, also called the operator
+        overloading.
+
+        So, to compare to objects we need to write a function that will
+        compare our two objects.
+    */
+
+    tomorrow.addDay(4);
+
+    if(tomorrow.equals(today)) {
+        cout << "The same day" << endl;
+    } else {
+        cout << "A different day" << endl;
+    }
+
     return 0;
 }
