@@ -8,6 +8,8 @@ int main()
     cout << "Enter your letter grade: ";
     cin >> letterGrade;
 
+    /*
+
     switch(letterGrade) {
         case 'A':
             cout << "..is in the range from 90 to 100." << endl;
@@ -28,7 +30,21 @@ int main()
             cout << "Don't recognize an input.";
     }
 
+    */
 
+    switch(letterGrade) {
+        case 'A':
+        case 'B':
+        case 'C':
+        case 'D':
+            cout << "You passed!" << endl;
+            break;
+        case 'F':
+            cout << "You failed." << endl;
+            break;
+        default:
+            cout << "Don't recognize an input.";
+    }
 
 
     return 0;
