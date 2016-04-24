@@ -107,6 +107,31 @@ class Date {
         return *this;
     }
 
+    // Overloading prefix increment
+    Date &operator++() {
+        ++day;
+        return *this;
+    }
+
+    Date &operator--() {
+        --day;
+        return *this;
+    }
+
+    // Overloading postfix increment
+    Date &operator++(int) {
+        Date d = *this;
+        ++*this;
+        return d;
+    }
+
+    // Overloading postfix decrement
+    Date &operator--(int) {
+        Date d = *this;
+        --*this;
+        return d;
+    }
+
 };
 
 bool operator>(const Date &d1, const Date &d2) {
@@ -171,7 +196,7 @@ int main()
         But we can write like this:
 
             today + 3;
-    */
+
 
     cout << today.getDay() << endl;
     today + 3;
@@ -183,6 +208,33 @@ int main()
     tomorrow2 = today;
     cout << endl;
     cout << tomorrow2.getDay() << endl;
+
+    */
+
+
+    /*
+        Working with overloading increments
+    */
+
+    cout << today.getDay() << endl;
+    ++today;
+    cout << today.getDay() << endl;
+    ++today;
+    cout << today.getDay() << endl;
+    --today;
+    cout << today.getDay() << endl;
+    today++;
+    cout << today.getDay() << endl;
+    today++;
+    cout << today.getDay() << endl;
+    today++;
+    cout << today.getDay() << endl;
+    today--;
+    cout << today.getDay() << endl;
+    today--;
+    cout << today.getDay() << endl;
+
+
 
     return 0;
 }
